@@ -1,0 +1,8 @@
+.mainContentBox {
+  height: 300vh;
+  padding: 60px 0 72px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
