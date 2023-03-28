@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ContentBox from "./ContentBox";
 import styles from "./MainContent.module.css";
 function MainContent() {
@@ -48,14 +49,16 @@ function MainContent() {
 			{fakeData &&
 				fakeData.map((v) => {
 					return (
-						<ContentBox
-							key={v.id}
-							createdAt={v.createdAt}
-							title={v.title}
-							part={v.part}
-							location={v.location}
-							img={v.img}
-						/>
+						<Link to={`/jobWriting/${v.id}`} key={v.id}>
+							<ContentBox
+								id={v.id}
+								createdAt={v.createdAt}
+								title={v.title}
+								part={v.part}
+								location={v.location}
+								img={v.img}
+							/>
+						</Link>
 					);
 				})}
 		</div>

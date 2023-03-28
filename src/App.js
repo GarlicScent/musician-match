@@ -1,9 +1,11 @@
 // import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BaseRoute from "./routes/BaseRoute";
 import MainContent from "./components/MainContent";
-import UserWriteContent from "./components/UserWriteContent";
+import UserWroteContent from "./components/UserWroteContent";
+import NewWriteForm from "./components/NewWriteForm";
+import Detail from "./components/Detail";
 
 function App() {
 	return (
@@ -18,12 +20,7 @@ function App() {
 								<div style={{ paddingTop: "60px" }}>Write</div>
 							}
 						/>
-						<Route
-							path="write"
-							element={
-								<div style={{ paddingTop: "60px" }}>Write</div>
-							}
-						/>
+						<Route path="write" element={<NewWriteForm />} />
 						<Route
 							path="message"
 							element={
@@ -34,8 +31,11 @@ function App() {
 						/>
 						<Route
 							path="user-profile"
-							element={<UserWriteContent />}
+							element={<UserWroteContent />}
 						/>
+					</Route>
+					<Route path="/jobWriting" element={<BaseRoute />}>
+						<Route path=":writingId" element={<Detail />}></Route>
 					</Route>
 				</Routes>
 			</Router>

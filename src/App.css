@@ -1,5 +1,14 @@
-*{
+*,
+::before,
+::after {
+  /* selecting all elements on the page, along with the ::before
+     and ::after pseudo-elements; resetting their margin and
+     padding to zero and forcing all elements to calculate their
+     box-sizing the same way, 'border-box' includes the border-widths,
+     and padding, in the stated width: */
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 .App {
   text-align: center;

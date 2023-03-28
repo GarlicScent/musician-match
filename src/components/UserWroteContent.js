@@ -1,6 +1,6 @@
 import ContentBox from "./ContentBox";
-import styles from "./UserWriteContent.module.css";
-function UserWriteContent() {
+import styles from "./UserWroteContent.module.css";
+function UserWroteContent() {
 	const fakeData = [
 		{
 			id: 0,
@@ -58,4 +58,4 @@ function UserWriteContent() {
 		</div>
 	);
 }
-export default UserWriteContent;
+export default UserWroteContent;

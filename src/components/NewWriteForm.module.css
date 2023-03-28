@@ -1,0 +1,36 @@
+.showFormContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding:5px;
+}
+.formBox{
+  padding-top: 60px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* 그리드로 하는게 나을려나..? */
+.formBox input[name='title']{
+  margin-top: 10px;
+  display: block;
+  margin: 10px auto 0 auto;
+  width: 80%;
+  font-size: 28px;
+  border-radius: 8px;
+  text-align:center;
+}
+.formBox textarea{
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  border-radius: 12px;
+  padding: 5px;
+}
+.formBox input[type='submit'] {
+  margin-top: 5px;
+  width: 120px;
+  height: 30px;
+}
+.selectDiv{
+  display: flex;
+  justify-content: space-around;
+}

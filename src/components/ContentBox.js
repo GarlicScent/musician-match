@@ -1,8 +1,13 @@
 import styles from "./ContentBox.module.css";
-function ContentBox({ createdAt, title, part, location, img }) {
-	// console.log(createdAt.toLocalString("ko").slice(0, 12));
+function ContentBox({ id, createdAt, title, part, location, img }) {
+	//클릭시 상세 내용 보여지게끔 하기.
 	return (
-		<div className={styles.contentBox}>
+		<div
+			className={styles.contentBox}
+			onClick={() => {
+				console.log("hi");
+			}}
+		>
 			<img
 				src={`/assets/${img[0]}`}
 				alt={img[0].split(".")[0]}
